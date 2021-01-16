@@ -14,23 +14,6 @@
 		66288E3C25B328950063CC5A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66288E3B25B328950063CC5A /* Home.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4F03ABB625B2B98F00D7A080 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4F03AB9C25B2B98D00D7A080 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4F03ABA325B2B98D00D7A080;
-			remoteInfo = Hackathon;
-		};
-		4F03ABC125B2B98F00D7A080 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4F03AB9C25B2B98D00D7A080 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4F03ABA325B2B98D00D7A080;
-			remoteInfo = Hackathon;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		4F03ABA425B2B98D00D7A080 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F03ABA725B2B98D00D7A080 /* HackathonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonApp.swift; sourceTree = "<group>"; };
@@ -38,27 +21,11 @@
 		4F03ABAB25B2B98F00D7A080 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F03ABAE25B2B98F00D7A080 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F03ABB025B2B98F00D7A080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F03ABB525B2B98F00D7A080 /* HackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F03ABC025B2B98F00D7A080 /* HackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66288E3B25B328950063CC5A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4F03ABA125B2B98D00D7A080 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4F03ABB225B2B98F00D7A080 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4F03ABBD25B2B98F00D7A080 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,8 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				4F03ABA425B2B98D00D7A080 /* Hackathon.app */,
-				4F03ABB525B2B98F00D7A080 /* HackathonTests.xctest */,
-				4F03ABC025B2B98F00D7A080 /* HackathonUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,7 +54,7 @@
 		4F03ABA625B2B98D00D7A080 /* Hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				66288E4025B32A300063CC5A /* New Group */,
+				66288E4025B32A300063CC5A /* Models */,
 				4F03ABA725B2B98D00D7A080 /* HackathonApp.swift */,
 				4F03ABA925B2B98D00D7A080 /* ContentView.swift */,
 				4F03ABAB25B2B98F00D7A080 /* Assets.xcassets */,
@@ -108,11 +73,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		66288E4025B32A300063CC5A /* New Group */ = {
+		66288E4025B32A300063CC5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group";
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,42 +100,6 @@
 			productReference = 4F03ABA425B2B98D00D7A080 /* Hackathon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4F03ABB425B2B98F00D7A080 /* HackathonTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4F03ABCC25B2B98F00D7A080 /* Build configuration list for PBXNativeTarget "HackathonTests" */;
-			buildPhases = (
-				4F03ABB125B2B98F00D7A080 /* Sources */,
-				4F03ABB225B2B98F00D7A080 /* Frameworks */,
-				4F03ABB325B2B98F00D7A080 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4F03ABB725B2B98F00D7A080 /* PBXTargetDependency */,
-			);
-			name = HackathonTests;
-			productName = HackathonTests;
-			productReference = 4F03ABB525B2B98F00D7A080 /* HackathonTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4F03ABBF25B2B98F00D7A080 /* HackathonUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4F03ABCF25B2B98F00D7A080 /* Build configuration list for PBXNativeTarget "HackathonUITests" */;
-			buildPhases = (
-				4F03ABBC25B2B98F00D7A080 /* Sources */,
-				4F03ABBD25B2B98F00D7A080 /* Frameworks */,
-				4F03ABBE25B2B98F00D7A080 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4F03ABC225B2B98F00D7A080 /* PBXTargetDependency */,
-			);
-			name = HackathonUITests;
-			productName = HackathonUITests;
-			productReference = 4F03ABC025B2B98F00D7A080 /* HackathonUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -182,14 +111,6 @@
 				TargetAttributes = {
 					4F03ABA325B2B98D00D7A080 = {
 						CreatedOnToolsVersion = 12.3;
-					};
-					4F03ABB425B2B98F00D7A080 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 4F03ABA325B2B98D00D7A080;
-					};
-					4F03ABBF25B2B98F00D7A080 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 4F03ABA325B2B98D00D7A080;
 					};
 				};
 			};
@@ -207,8 +128,6 @@
 			projectRoot = "";
 			targets = (
 				4F03ABA325B2B98D00D7A080 /* Hackathon */,
-				4F03ABB425B2B98F00D7A080 /* HackathonTests */,
-				4F03ABBF25B2B98F00D7A080 /* HackathonUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,20 +139,6 @@
 			files = (
 				4F03ABAF25B2B98F00D7A080 /* Preview Assets.xcassets in Resources */,
 				4F03ABAC25B2B98F00D7A080 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4F03ABB325B2B98F00D7A080 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4F03ABBE25B2B98F00D7A080 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,34 +155,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F03ABB125B2B98F00D7A080 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4F03ABBC25B2B98F00D7A080 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4F03ABB725B2B98F00D7A080 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4F03ABA325B2B98D00D7A080 /* Hackathon */;
-			targetProxy = 4F03ABB625B2B98F00D7A080 /* PBXContainerItemProxy */;
-		};
-		4F03ABC225B2B98F00D7A080 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4F03ABA325B2B98D00D7A080 /* Hackathon */;
-			targetProxy = 4F03ABC125B2B98F00D7A080 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4F03ABC725B2B98F00D7A080 /* Debug */ = {
@@ -438,86 +316,6 @@
 			};
 			name = Release;
 		};
-		4F03ABCD25B2B98F00D7A080 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HackathonTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = HackTheNorth.HackathonTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hackathon.app/Hackathon";
-			};
-			name = Debug;
-		};
-		4F03ABCE25B2B98F00D7A080 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HackathonTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = HackTheNorth.HackathonTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hackathon.app/Hackathon";
-			};
-			name = Release;
-		};
-		4F03ABD025B2B98F00D7A080 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HackathonUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = HackTheNorth.HackathonUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Hackathon;
-			};
-			name = Debug;
-		};
-		4F03ABD125B2B98F00D7A080 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HackathonUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = HackTheNorth.HackathonUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Hackathon;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -535,24 +333,6 @@
 			buildConfigurations = (
 				4F03ABCA25B2B98F00D7A080 /* Debug */,
 				4F03ABCB25B2B98F00D7A080 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4F03ABCC25B2B98F00D7A080 /* Build configuration list for PBXNativeTarget "HackathonTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4F03ABCD25B2B98F00D7A080 /* Debug */,
-				4F03ABCE25B2B98F00D7A080 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4F03ABCF25B2B98F00D7A080 /* Build configuration list for PBXNativeTarget "HackathonUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4F03ABD025B2B98F00D7A080 /* Debug */,
-				4F03ABD125B2B98F00D7A080 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
