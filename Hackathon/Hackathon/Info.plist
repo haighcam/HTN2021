@@ -31,6 +31,8 @@
 	<true/>
 	<key>UILaunchScreen</key>
 	<dict>
+		<key>UIImageName</key>
+		<string>livecam</string>
 		<key>UIColorName</key>
 		<string>white</string>
 	</dict>
