@@ -13,6 +13,7 @@ struct Home: View {
         VStack(spacing:40){
             HStack{
                 Image("livecap")
+//                    Image name needs to be changed
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width:100,height:100)
@@ -36,7 +37,7 @@ struct Home: View {
                     }
                 }
                 Button(action:{
-                    print("Test successfully")
+//                    CameraView()
                 }){
                     VStack{
                         Image("takepic")
