@@ -9,23 +9,52 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        VStack(spacing:30){
+        VStack(spacing:40){
+            HStack{
+                Image("livecap")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width:100,height:100)
+                Text("LiveCap")
+                    .font(.largeTitle)
+                    .padding(.trailing, 10.0)
+                    .frame(width: 150.0, height: 100.0)
+            }
             Text("LiveCap Provides real-time visual\n descriptors of photos and videos")
             Text("Choose to upload an existing\n photo/video or get captioning live\n while filming")
-            Spacer()
-            HStack{
-                Text("Upload")
-                Text("Open Camera")
+            HStack(spacing:70){
+                Button(action:{
+                    print("Test successfully")
+                }){
+                    VStack{
+                        Image("upload")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width:100,height:100)
+                        Text("Upload a picture").bold()
+                    }
+                }
+                Button(action:{
+                    print("Test successfully")
+                }){
+                    VStack{
+                        Image("takepic")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width:100,height:100)
+                        Text("Or take one now").bold()
+                    }
+                }
             }
             Button(action:{
                 print("Test successfully")
             },label:{
-                homebutton(buttonText: "Caption Settings", buttonColor:Color.blue)
+                homebutton(buttonText: "Caption Settings", buttonColor:Color("settings"))
             })
             Button(action:{
                 print("Test successfully")
             },label:{
-                homebutton(buttonText: "Caption Settings", buttonColor:Color.red)
+                homebutton(buttonText: "How does this work?", buttonColor:Color.red)
             })
             
         }

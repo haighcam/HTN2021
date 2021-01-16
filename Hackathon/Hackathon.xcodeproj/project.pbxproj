@@ -12,6 +12,8 @@
 		4F03ABAC25B2B98F00D7A080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03ABAB25B2B98F00D7A080 /* Assets.xcassets */; };
 		4F03ABAF25B2B98F00D7A080 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03ABAE25B2B98F00D7A080 /* Preview Assets.xcassets */; };
 		66288E3C25B328950063CC5A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66288E3B25B328950063CC5A /* Home.swift */; };
+		66288E5D25B345460063CC5A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66288E5C25B345460063CC5A /* CameraView.swift */; };
+		66288E6025B348B70063CC5A /* CaptionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66288E5F25B348B70063CC5A /* CaptionSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4F03ABAE25B2B98F00D7A080 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F03ABB025B2B98F00D7A080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66288E3B25B328950063CC5A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		66288E5C25B345460063CC5A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		66288E5F25B348B70063CC5A /* CaptionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				4F03ABB025B2B98F00D7A080 /* Info.plist */,
 				4F03ABAD25B2B98F00D7A080 /* Preview Content */,
 				66288E3B25B328950063CC5A /* Home.swift */,
+				66288E5C25B345460063CC5A /* CameraView.swift */,
+				66288E5F25B348B70063CC5A /* CaptionSettings.swift */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -150,8 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F03ABAA25B2B98D00D7A080 /* ContentView.swift in Sources */,
+				66288E6025B348B70063CC5A /* CaptionSettings.swift in Sources */,
 				66288E3C25B328950063CC5A /* Home.swift in Sources */,
 				4F03ABA825B2B98D00D7A080 /* HackathonApp.swift in Sources */,
+				66288E5D25B345460063CC5A /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
