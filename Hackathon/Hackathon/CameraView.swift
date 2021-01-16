@@ -26,17 +26,19 @@ struct CameraView: View {
                 
                 if camera.isTaken{
                     
-                    HStack {
-                        
+                    
+
+                        VStack {
                         Spacer()
-                        
                         Button(action: camera.reTake, label: {
 
-                            Image(systemName: "arrow.triangle.2.circlepath.camera")
+                            Text("Retake")
                                 .foregroundColor(.black)
-                                .padding()
+                                .fontWeight(.semibold)
+                                .padding(.vertical,10)
+                                .padding(.horizontal,20)
                                 .background(Color.white)
-                                .clipShape(Circle())
+                                .clipShape(Capsule())
                         })
                         .padding(.trailing,10)
                     }

@@ -10,10 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack{
-            launchscreen()
-//            UploadView()
-//            Home()
-//            CameraView()
+//            launchscreen()
+            CameraView()
         }
     }
 }

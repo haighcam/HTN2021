@@ -76,7 +76,7 @@ struct Home: View {
                 }
             }
             Button(action:{
-                print("Test successfully")
+                CaptionSettings()
             },label:{
                 homebutton(buttonText: "Caption Settings", buttonColor:Color("settings"))
             })
