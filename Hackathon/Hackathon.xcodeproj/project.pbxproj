@@ -12,6 +12,8 @@
 		4F03ABAC25B2B98F00D7A080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03ABAB25B2B98F00D7A080 /* Assets.xcassets */; };
 		4F03ABAF25B2B98F00D7A080 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03ABAE25B2B98F00D7A080 /* Preview Assets.xcassets */; };
 		4F06A09625B36FBE0063E0B5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F06A09525B36FBE0063E0B5 /* CameraView.swift */; };
+		4F142D8925B37CB5008345AC /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F142D8825B37CB5008345AC /* Picker.swift */; };
+		4FC9C57025B3751C00EB868E /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9C56F25B3751C00EB868E /* UploadView.swift */; };
 		66288E3C25B328950063CC5A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66288E3B25B328950063CC5A /* Home.swift */; };
 		66288E6025B348B70063CC5A /* CaptionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66288E5F25B348B70063CC5A /* CaptionSettings.swift */; };
 		ED68F4929396D5F5818BF12E /* Pods_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E507AEEC2AEA586501C796D /* Pods_Hackathon.framework */; };
@@ -26,6 +28,8 @@
 		4F03ABAE25B2B98F00D7A080 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F03ABB025B2B98F00D7A080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F06A09525B36FBE0063E0B5 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		4F142D8825B37CB5008345AC /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		4FC9C56F25B3751C00EB868E /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 		66288E3B25B328950063CC5A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		66288E5F25B348B70063CC5A /* CaptionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionSettings.swift; sourceTree = "<group>"; };
 		9E507AEEC2AEA586501C796D /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +86,8 @@
 				4F03ABAD25B2B98F00D7A080 /* Preview Content */,
 				66288E3B25B328950063CC5A /* Home.swift */,
 				66288E5F25B348B70063CC5A /* CaptionSettings.swift */,
+				4FC9C56F25B3751C00EB868E /* UploadView.swift */,
+				4F142D8825B37CB5008345AC /* Picker.swift */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -100,7 +106,6 @@
 				35C8FF0F441F3293C8B9FF84 /* Pods-Hackathon.debug.xcconfig */,
 				CFE553A7FA07A851764A0C18 /* Pods-Hackathon.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +213,9 @@
 			files = (
 				4F03ABAA25B2B98D00D7A080 /* ContentView.swift in Sources */,
 				66288E6025B348B70063CC5A /* CaptionSettings.swift in Sources */,
+				4F142D8925B37CB5008345AC /* Picker.swift in Sources */,
 				66288E3C25B328950063CC5A /* Home.swift in Sources */,
+				4FC9C57025B3751C00EB868E /* UploadView.swift in Sources */,
 				4F06A09625B36FBE0063E0B5 /* CameraView.swift in Sources */,
 				4F03ABA825B2B98D00D7A080 /* HackathonApp.swift in Sources */,
 			);
@@ -352,7 +359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = HackTheNorth.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -372,10 +379,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"MTL_ENABLE_DEBUG_INFO[arch=*]" = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = HackTheNorth.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
