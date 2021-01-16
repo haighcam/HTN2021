@@ -15,14 +15,13 @@
 		4F142D8925B37CB5008345AC /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F142D8825B37CB5008345AC /* Picker.swift */; };
 		4F142D8E25B38DE3008345AC /* TorchBridge in Resources */ = {isa = PBXBuildFile; fileRef = 4F142D8D25B38DE3008345AC /* TorchBridge */; };
 		4F142D9225B3940C008345AC /* launchscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F142D9125B3940C008345AC /* launchscreen.swift */; };
+		4F1CF3F925B3A51B00D7F0C2 /* Pods_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD5CB50F605CCE201DCD773 /* Pods_Hackathon.framework */; };
 		4FC9C57025B3751C00EB868E /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9C56F25B3751C00EB868E /* UploadView.swift */; };
 		66288E3C25B328950063CC5A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66288E3B25B328950063CC5A /* Home.swift */; };
 		66288E6025B348B70063CC5A /* CaptionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66288E5F25B348B70063CC5A /* CaptionSettings.swift */; };
-		ED68F4929396D5F5818BF12E /* Pods_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E507AEEC2AEA586501C796D /* Pods_Hackathon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		35C8FF0F441F3293C8B9FF84 /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		4F03ABA425B2B98D00D7A080 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F03ABA725B2B98D00D7A080 /* HackathonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonApp.swift; sourceTree = "<group>"; };
 		4F03ABA925B2B98D00D7A080 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,13 +30,14 @@
 		4F03ABB025B2B98F00D7A080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F06A09525B36FBE0063E0B5 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		4F142D8825B37CB5008345AC /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
-		4F142D8D25B38DE3008345AC /* TorchBridge */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = TorchBridge; path = Hackathon/Models/TorchBridge; sourceTree = SOURCE_ROOT; };
+		4F142D8D25B38DE3008345AC /* TorchBridge */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = TorchBridge; path = Hackathon/TorchBridge; sourceTree = SOURCE_ROOT; };
 		4F142D9125B3940C008345AC /* launchscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchscreen.swift; sourceTree = "<group>"; };
 		4FC9C56F25B3751C00EB868E /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 		66288E3B25B328950063CC5A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		66288E5F25B348B70063CC5A /* CaptionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionSettings.swift; sourceTree = "<group>"; };
-		9E507AEEC2AEA586501C796D /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFE553A7FA07A851764A0C18 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
+		AA81FC4E2C3B2B02317E1339 /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
+		BFD5CB50F605CCE201DCD773 /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E54D39BDE15773D0C3547C96 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,28 +45,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED68F4929396D5F5818BF12E /* Pods_Hackathon.framework in Frameworks */,
+				4F1CF3F925B3A51B00D7F0C2 /* Pods_Hackathon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1687FC14665256A8E607ABB6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9E507AEEC2AEA586501C796D /* Pods_Hackathon.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4F03AB9B25B2B98D00D7A080 = {
 			isa = PBXGroup;
 			children = (
 				4F03ABA625B2B98D00D7A080 /* Hackathon */,
 				4F03ABA525B2B98D00D7A080 /* Products */,
 				6544FAF37DC0635AE1C61197 /* Pods */,
-				1687FC14665256A8E607ABB6 /* Frameworks */,
+				D7BC1343D4D21D1930581280 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,9 +82,10 @@
 				4F03ABAD25B2B98F00D7A080 /* Preview Content */,
 				66288E3B25B328950063CC5A /* Home.swift */,
 				66288E5F25B348B70063CC5A /* CaptionSettings.swift */,
+				4F142D9125B3940C008345AC /* launchscreen.swift */,
+				4F142D8D25B38DE3008345AC /* TorchBridge */,
 				4FC9C56F25B3751C00EB868E /* UploadView.swift */,
 				4F142D8825B37CB5008345AC /* Picker.swift */,
-				4F142D9125B3940C008345AC /* launchscreen.swift */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -108,8 +101,8 @@
 		6544FAF37DC0635AE1C61197 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				35C8FF0F441F3293C8B9FF84 /* Pods-Hackathon.debug.xcconfig */,
-				CFE553A7FA07A851764A0C18 /* Pods-Hackathon.release.xcconfig */,
+				AA81FC4E2C3B2B02317E1339 /* Pods-Hackathon.debug.xcconfig */,
+				E54D39BDE15773D0C3547C96 /* Pods-Hackathon.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -117,9 +110,16 @@
 		66288E4025B32A300063CC5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4F142D8D25B38DE3008345AC /* TorchBridge */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D7BC1343D4D21D1930581280 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFD5CB50F605CCE201DCD773 /* Pods_Hackathon.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +129,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F03ABC925B2B98F00D7A080 /* Build configuration list for PBXNativeTarget "Hackathon" */;
 			buildPhases = (
-				39BC9AB4C377185F8679F045 /* [CP] Check Pods Manifest.lock */,
+				91E71D608783FA0B4B9560F6 /* [CP] Check Pods Manifest.lock */,
 				4F03ABA025B2B98D00D7A080 /* Sources */,
 				4F03ABA125B2B98D00D7A080 /* Frameworks */,
 				4F03ABA225B2B98D00D7A080 /* Resources */,
@@ -189,7 +189,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		39BC9AB4C377185F8679F045 /* [CP] Check Pods Manifest.lock */ = {
+		91E71D608783FA0B4B9560F6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,7 +350,7 @@
 		};
 		4F03ABCA25B2B98F00D7A080 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35C8FF0F441F3293C8B9FF84 /* Pods-Hackathon.debug.xcconfig */;
+			baseConfigurationReference = AA81FC4E2C3B2B02317E1339 /* Pods-Hackathon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -373,7 +373,7 @@
 		};
 		4F03ABCB25B2B98F00D7A080 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFE553A7FA07A851764A0C18 /* Pods-Hackathon.release.xcconfig */;
+			baseConfigurationReference = E54D39BDE15773D0C3547C96 /* Pods-Hackathon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
