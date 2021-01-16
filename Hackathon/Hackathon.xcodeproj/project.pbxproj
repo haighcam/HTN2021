@@ -11,8 +11,7 @@
 		4F03ABAA25B2B98D00D7A080 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03ABA925B2B98D00D7A080 /* ContentView.swift */; };
 		4F03ABAC25B2B98F00D7A080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03ABAB25B2B98F00D7A080 /* Assets.xcassets */; };
 		4F03ABAF25B2B98F00D7A080 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03ABAE25B2B98F00D7A080 /* Preview Assets.xcassets */; };
-		4F03ABBA25B2B98F00D7A080 /* HackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03ABB925B2B98F00D7A080 /* HackathonTests.swift */; };
-		4F03ABC525B2B98F00D7A080 /* HackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03ABC425B2B98F00D7A080 /* HackathonUITests.swift */; };
+		66288E3C25B328950063CC5A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66288E3B25B328950063CC5A /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +39,8 @@
 		4F03ABAE25B2B98F00D7A080 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F03ABB025B2B98F00D7A080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F03ABB525B2B98F00D7A080 /* HackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F03ABB925B2B98F00D7A080 /* HackathonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonTests.swift; sourceTree = "<group>"; };
-		4F03ABBB25B2B98F00D7A080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F03ABC025B2B98F00D7A080 /* HackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F03ABC425B2B98F00D7A080 /* HackathonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonUITests.swift; sourceTree = "<group>"; };
-		4F03ABC625B2B98F00D7A080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66288E3B25B328950063CC5A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				4F03ABA625B2B98D00D7A080 /* Hackathon */,
-				4F03ABB825B2B98F00D7A080 /* HackathonTests */,
-				4F03ABC325B2B98F00D7A080 /* HackathonUITests */,
 				4F03ABA525B2B98D00D7A080 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,11 +89,13 @@
 		4F03ABA625B2B98D00D7A080 /* Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				66288E4025B32A300063CC5A /* New Group */,
 				4F03ABA725B2B98D00D7A080 /* HackathonApp.swift */,
 				4F03ABA925B2B98D00D7A080 /* ContentView.swift */,
 				4F03ABAB25B2B98F00D7A080 /* Assets.xcassets */,
 				4F03ABB025B2B98F00D7A080 /* Info.plist */,
 				4F03ABAD25B2B98F00D7A080 /* Preview Content */,
+				66288E3B25B328950063CC5A /* Home.swift */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -112,22 +108,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		4F03ABB825B2B98F00D7A080 /* HackathonTests */ = {
+		66288E4025B32A300063CC5A /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				4F03ABB925B2B98F00D7A080 /* HackathonTests.swift */,
-				4F03ABBB25B2B98F00D7A080 /* Info.plist */,
 			);
-			path = HackathonTests;
-			sourceTree = "<group>";
-		};
-		4F03ABC325B2B98F00D7A080 /* HackathonUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4F03ABC425B2B98F00D7A080 /* HackathonUITests.swift */,
-				4F03ABC625B2B98F00D7A080 /* Info.plist */,
-			);
-			path = HackathonUITests;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F03ABAA25B2B98D00D7A080 /* ContentView.swift in Sources */,
+				66288E3C25B328950063CC5A /* Home.swift in Sources */,
 				4F03ABA825B2B98D00D7A080 /* HackathonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F03ABBA25B2B98F00D7A080 /* HackathonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +261,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F03ABC525B2B98F00D7A080 /* HackathonUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
