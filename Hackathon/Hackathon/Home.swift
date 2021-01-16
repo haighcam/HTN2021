@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct Home: View {
     var body: some View {
         VStack(spacing:40){
@@ -94,10 +95,4 @@ struct Home_Previews: PreviewProvider {
         Home()
     }
 }
-
-//struct homebutton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        homebutton()
-//    }
-//}
 
