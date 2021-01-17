@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CaptionGen</string>
+
+    <string name="image_button_text">Caption Image</string>
+    <string name="camera_button_text">Caption Camera Input</string>
+    <string name="file_button_text">Caption File</string>
+
+</resources>
