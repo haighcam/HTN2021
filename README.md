@@ -1,3 +1,3 @@
-# HTN2021
+# HTN2021(Unfinished)
 
-For Hack The North 2021
+Having trouble with compile pytorch on Xcode 12.3
