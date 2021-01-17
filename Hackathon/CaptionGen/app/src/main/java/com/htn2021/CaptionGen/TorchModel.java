@@ -39,7 +39,7 @@ public class TorchModel {
             }
         }
 
-        return caption;
+        return caption.substring(0, 1).toUpperCase() + caption.substring(1) + ".";
     }
 
     public static String assetFilePath(Context context, String assetName) throws IOException {

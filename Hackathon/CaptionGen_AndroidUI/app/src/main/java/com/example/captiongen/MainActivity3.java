@@ -15,12 +15,12 @@ public class MainActivity3 extends AppCompatActivity {
     }
 
     public void Gallery(View view){
-        Intent intent = new Intent(MainActivity3.this, gallery.class);
+        Intent intent = new Intent(MainActivity3.this, MainActivity2.class);
         startActivity(intent);
     }
 
     public void Live(View view){
-        Intent intent = new Intent(MainActivity3.this, live.class);
+        Intent intent = new Intent(MainActivity3.this, MainActivity.class);
         startActivity(intent);
     }
 }

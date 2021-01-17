@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">CaptionGen</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_secondactivity">MainActivity</string>
+    <string name="title_activity_main2">MainActivity</string>
 
     <string name="image_button_text">Caption Image</string>
     <string name="camera_button_text">Caption Camera Input</string>

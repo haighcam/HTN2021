@@ -1,4 +1,4 @@
-package com.example.captiongen;
+package com.htn2021.CaptionGen;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -23,15 +24,15 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 
-public class MainActivity extends Activity {
+public class Gallery extends AppCompatActivity {
 
     private ImageView selectedImage;
-    private Bitmap currentImage;
+    private String currentImage;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.image_screen);
         selectedImage = (ImageView) findViewById(R.id.imageView);
         Button openGallery = (Button) findViewById(R.id.button);
 
@@ -44,46 +45,32 @@ public class MainActivity extends Activity {
                 startActivityForResult(photoPickerIntent, 1);
             }
         });
+
+        findViewById(R.id.button2).setOnClickListener(v -> send(v));
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if (resultCode == RESULT_OK) {
             Uri photoUri = data.getData();
-            if (1 != null) {
+            if (photoUri != null) {
                 try {
-                    currentImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), photoUri);
-                    selectedImage.setImageBitmap(currentImage);
+
+                    Bitmap image = MediaStore.Images.Media.getBitmap(this.getContentResolver(), photoUri);
+                    selectedImage.setImageBitmap(image);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                currentImage = photoUri.toString();
+                Log.e("test", currentImage);
             }
-        }
-    }
-    private Bitmap convertImageViewToBitmap(ImageView v){
-
-        Bitmap bm=((BitmapDrawable)v.getDrawable()).getBitmap();
-
-        return bm;
-    }
-
-
-    public void onStop() {
-        super.onStop();
-        if (currentImage != null) {
-            currentImage.recycle();
-            currentImage = null;
-            System.gc();
         }
     }
 
     public void send(View v){
-        Intent i = new Intent(MainActivity.this, MainActivity2.class);
-        selectedImage = (ImageView) findViewById(R.id.imageView2);
-        Bitmap map = convertImageViewToBitmap(selectedImage);
-        i.putExtra("resId", map);
+        Intent i = new Intent(Gallery.this, ImageActivity.class);
+        i.putExtra("resId", currentImage);
         startActivity(i);
 
     }

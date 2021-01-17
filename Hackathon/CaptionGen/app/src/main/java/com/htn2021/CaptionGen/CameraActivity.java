@@ -45,7 +45,7 @@ public class CameraActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.camera_main);
+    setContentView(R.layout.caption_camera);
 
     try {
       mModel = new TorchModel(this);
@@ -58,7 +58,7 @@ public class CameraActivity extends AppCompatActivity {
             Tensor.allocateFloatBuffer(3 * INPUT_TENSOR_WIDTH * INPUT_TENSOR_HEIGHT);
     mInputTensor = Tensor.fromBlob(mInputTensorBuffer, new long[]{1, 3, INPUT_TENSOR_HEIGHT, INPUT_TENSOR_WIDTH});
 
-    mCaption = findViewById(R.id.text);
+    mCaption = findViewById(R.id.textView);
 
     startBackgroundThread();
 
