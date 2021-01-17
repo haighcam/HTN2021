@@ -21,12 +21,13 @@ import org.pytorch.torchvision.TensorImageUtils;
 
 import java.io.IOException;
 
-
 public class ImageActivity extends AppCompatActivity {
+  private TTS mTTS;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    mTTS = new TTS(this);
     setContentView(R.layout.caption_image);
     Uri photoUri = null;
     Bundle bundle = getIntent().getExtras();
@@ -62,9 +63,9 @@ public class ImageActivity extends AppCompatActivity {
 
     String className = model.forward(inputTensor);
 
-
     // showing className on UI
     TextView textView = findViewById(R.id.textView);
     textView.setText(className);
+    mTTS.speak(className);
   }
 }

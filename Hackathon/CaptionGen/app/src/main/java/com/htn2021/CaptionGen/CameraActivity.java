@@ -40,13 +40,14 @@ public class CameraActivity extends AppCompatActivity {
   private TextView mCaption;
   private static final int INPUT_TENSOR_WIDTH = 224;
   private static final int INPUT_TENSOR_HEIGHT = 224;
+  private TTS mTTS;
   TorchModel mModel;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.caption_camera);
-
+    mTTS = new TTS(this);
     try {
       mModel = new TorchModel(this);
     } catch (IOException e) {
@@ -133,6 +134,7 @@ public class CameraActivity extends AppCompatActivity {
 
   protected void applyToUiAnalyzeImageResult(String result) {
     mCaption.setText(result);
+    mTTS.speak(result);
   }
 
   protected String analyzeImage(ImageProxy image, int rotationDegrees) {
