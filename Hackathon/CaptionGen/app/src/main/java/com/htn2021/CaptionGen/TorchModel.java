@@ -35,11 +35,11 @@ public class TorchModel {
         for (i=0; i< words.length; i++) {
             long val = words[i];
             if (val != 0 && val != 9488 && val != 9489) {
-                caption = caption + " " + Wordmap.getProperty(Long.toString(val));
+                caption = caption + Wordmap.getProperty(Long.toString(val)) + " ";
             }
         }
 
-        return caption.substring(0, 1).toUpperCase() + caption.substring(1) + ".";
+        return caption.substring(0, 1).toUpperCase() + caption.substring(1, caption.length() - 1) + ".";
     }
 
     public static String assetFilePath(Context context, String assetName) throws IOException {

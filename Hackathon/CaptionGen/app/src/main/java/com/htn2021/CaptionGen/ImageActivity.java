@@ -2,6 +2,9 @@ package com.htn2021.CaptionGen;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.ImageDecoder;
+import android.graphics.ImageDecoder.Source;
+
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -21,7 +24,6 @@ import java.io.IOException;
 
 public class ImageActivity extends AppCompatActivity {
 
-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -39,12 +41,10 @@ public class ImageActivity extends AppCompatActivity {
     } catch (Exception e) {
       e.printStackTrace();
     }
+    bitmap = Bitmap.createScaledBitmap(bitmap, 224, 224, false);
+
     ImageView imageView = findViewById(R.id.imageView2);
     imageView.setImageBitmap(bitmap);
-
-    BitmapDrawable bitmapDrawable = new BitmapDrawable(getResources(), bitmap);
-    bitmapDrawable.setBounds(0, 0, 224, 224); //Make it a new size in pixels.
-    bitmap = bitmapDrawable.getBitmap(); //Convert it back to a bitmap optimised for display purposes.
 
     TorchModel model = null;
     try {
