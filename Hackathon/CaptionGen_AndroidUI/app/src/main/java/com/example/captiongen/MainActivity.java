@@ -3,6 +3,8 @@ package com.example.captiongen;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -20,47 +22,72 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+
 public class MainActivity extends Activity {
 
-    private static final int SELECT_PICTURE = 1;
+    private ImageView selectedImage;
+    private Bitmap currentImage;
 
-    private String selectedImagePath;
-    private ImageView img;
-
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        selectedImage = (ImageView) findViewById(R.id.imageView);
+        Button openGallery = (Button) findViewById(R.id.button);
 
-        img = (ImageView)findViewById(R.id.imageView);
+        openGallery.setOnClickListener(new View.OnClickListener() {
 
-        ((Button) findViewById(R.id.button))
-                .setOnClickListener(new OnClickListener() {
-                    public void onClick(View arg0) {
-                        Intent intent = new Intent();
-                        intent.setType("image/*");
-                        intent.setAction(Intent.ACTION_GET_CONTENT);
-                        startActivityForResult(Intent.createChooser(intent,"Select Picture"), SELECT_PICTURE);
-                    }
-                });
+            @Override
+            public void onClick(View v) {
+                Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+                photoPickerIntent.setType("image/*");
+                startActivityForResult(photoPickerIntent, 1);
+            }
+        });
     }
 
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
         if (resultCode == RESULT_OK) {
-            if (requestCode == SELECT_PICTURE) {
-                Uri selectedImageUri = data.getData();
-                selectedImagePath = getPath(selectedImageUri);
-                System.out.println("Image Path : " + selectedImagePath);
-                img.setImageURI(selectedImageUri);
+            Uri photoUri = data.getData();
+            if (photoUri != null) {
+                try {
+                    currentImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), photoUri);
+                    selectedImage.setImageBitmap(currentImage);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
+    private Bitmap convertImageViewToBitmap(ImageView v){
 
-    public String getPath(Uri uri) {
-        String[] projection = { MediaStore.Images.Media.DATA };
-        Cursor cursor = managedQuery(uri, projection, null, null, null);
-        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-        cursor.moveToFirst();
-        return cursor.getString(column_index);
+        Bitmap bm=((BitmapDrawable)v.getDrawable()).getBitmap();
+
+        return bm;
+    }
+
+
+    public void onStop() {
+        super.onStop();
+        if (currentImage != null) {
+            currentImage.recycle();
+            currentImage = null;
+            System.gc();
+        }
+    }
+
+    public void send(View v){
+        Intent i = new Intent(MainActivity.this, MainActivity2.class);
+        selectedImage = (ImageView) findViewById(R.id.imageView2);
+        Bitmap map = convertImageViewToBitmap(selectedImage);
+        i.putExtra("resId", map);
+        startActivity(i);
+
     }
 }
+
+
 
