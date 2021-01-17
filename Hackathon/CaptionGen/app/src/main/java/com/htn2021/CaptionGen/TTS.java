@@ -24,6 +24,7 @@ public class TTS implements OnInitListener {
             mReady = true;
             Log.e("TTS", "loaded");
             mTTS.setLanguage(Locale.UK);
+            mTTS.setSpeechRate(1.66f);
             while (true) {
                 String val = mQ.poll();
                 if (val == null) {
@@ -41,8 +42,9 @@ public class TTS implements OnInitListener {
         if (mReady) {
             mTTS.speak(text, TextToSpeech.QUEUE_ADD, null);
             Log.e("TTS", "requested :" + text);
+        } else {
+            mQ.add(text);
+            Log.e("TTS", "not ready :" + text);
         }
-        mQ.add(text);
-        Log.e("TTS", "not ready :" + text);
     }
 }
