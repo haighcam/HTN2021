@@ -34,7 +34,7 @@ public class Gallery extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.image_screen);
         selectedImage = (ImageView) findViewById(R.id.imageView);
-        Button openGallery = (Button) findViewById(R.id.button);
+        ImageButton openGallery = (ImageButton) findViewById(R.id.button);
 
         openGallery.setOnClickListener(new View.OnClickListener() {
 
