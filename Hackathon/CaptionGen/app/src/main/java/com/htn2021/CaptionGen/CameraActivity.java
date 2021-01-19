@@ -10,13 +10,11 @@ import android.os.HandlerThread;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.view.ViewStub;
 import android.view.TextureView;
 
 import org.pytorch.Tensor;
 import org.pytorch.torchvision.TensorImageUtils;
 
-import java.io.IOException;
 import java.nio.FloatBuffer;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,25 +39,27 @@ public class CameraActivity extends AppCompatActivity {
   private static final int INPUT_TENSOR_WIDTH = 224;
   private static final int INPUT_TENSOR_HEIGHT = 224;
   private TTS mTTS;
-  TorchModel mModel;
+  private TorchModel mModel;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.caption_camera);
-    mTTS = new TTS(this);
-    try {
-      mModel = new TorchModel(this);
-    } catch (IOException e) {
-      Log.e("PytorchHelloWorld", "Error reading assets", e);
-      finish();
-    }
+    setContentView(R.layout.camera_activity);
+    final CustomCallback<TorchModel, TTS> observer = new CustomCallback<TorchModel, TTS>() {
+      @Override
+      public void callback(TorchModel model, TTS tts) {
+        mModel = model;
+        mTTS = tts;
+      }
+    };
+    GlobalData.getInstance().addObserver(observer);
 
     mInputTensorBuffer =
             Tensor.allocateFloatBuffer(3 * INPUT_TENSOR_WIDTH * INPUT_TENSOR_HEIGHT);
     mInputTensor = Tensor.fromBlob(mInputTensorBuffer, new long[]{1, 3, INPUT_TENSOR_HEIGHT, INPUT_TENSOR_WIDTH});
 
     mCaption = findViewById(R.id.textView);
+    mCaption.setText("Computing Caption");
 
     startBackgroundThread();
 
@@ -105,7 +105,7 @@ public class CameraActivity extends AppCompatActivity {
 
     final ImageAnalysisConfig imageAnalysisConfig =
             new ImageAnalysisConfig.Builder()
-                    .setTargetResolution(new Size(224, 224))
+                    .setTargetResolution(new Size(INPUT_TENSOR_WIDTH, INPUT_TENSOR_HEIGHT))
                     .setCallbackHandler(mBackgroundHandler)
                     .setImageReaderMode(ImageAnalysis.ImageReaderMode.ACQUIRE_LATEST_IMAGE)
                     .build();
@@ -127,25 +127,28 @@ public class CameraActivity extends AppCompatActivity {
   }
 
   protected TextureView getCameraPreviewTextureView() {
-    return ((ViewStub) findViewById(R.id.image_classification_texture_view_stub))
-            .inflate()
-            .findViewById(R.id.image_classification_texture_view);
+    return (TextureView) findViewById(R.id.image_classification_texture_view);
   }
 
   protected void applyToUiAnalyzeImageResult(String result) {
     mCaption.setText(result);
-    mTTS.speak(result);
+    if (mTTS != null) {
+      mTTS.speak(result);
+    }
   }
 
   protected String analyzeImage(ImageProxy image, int rotationDegrees) {
-    TensorImageUtils.imageYUV420CenterCropToFloatBuffer(
-            image.getImage(), rotationDegrees,
-            INPUT_TENSOR_WIDTH, INPUT_TENSOR_HEIGHT,
-            TensorImageUtils.TORCHVISION_NORM_MEAN_RGB,
-            TensorImageUtils.TORCHVISION_NORM_STD_RGB,
-            mInputTensorBuffer, 0);
-
-    return mModel.forward(mInputTensor);
+    if (mModel != null) {
+      TensorImageUtils.imageYUV420CenterCropToFloatBuffer(
+              image.getImage(), rotationDegrees,
+              INPUT_TENSOR_WIDTH, INPUT_TENSOR_HEIGHT,
+              TensorImageUtils.TORCHVISION_NORM_MEAN_RGB,
+              TensorImageUtils.TORCHVISION_NORM_STD_RGB,
+              mInputTensorBuffer, 0);
+      return mModel.forward(mInputTensor);
+    } else {
+      return null;
+    }
   }
 
   @Override

@@ -23,6 +23,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    sourceSets {
+        main {
+            java {
+                srcDirs 'src/main/java', 'src/main/java/com/htn2021/CaptionGen/TorchModel.TorchModel'
+            }
+        }
+    }
 }
 
 dependencies {
